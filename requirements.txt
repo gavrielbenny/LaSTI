@@ -9,8 +9,6 @@ cffi==1.15.0
 chardet==3.0.4
 configobj==5.0.6
 cryptography==2.8
-dbus-python==1.2.16
-distlib==0.3.0
 fastapi==0.68.1
 httplib2==0.14.0
 hyperlink==19.0.0
