@@ -32,7 +32,7 @@ async def login_user(username : str, password : str):
 
 @app.get('/')
 def root():
-    return{'Presence':'Item'}
+    return{'Sistem Presensi Panti Nirmala'}
 
 @app.get('/presence/{user_id}', dependencies=[Depends(JWTBearer())])
 async def read_presence(user_id: int):
