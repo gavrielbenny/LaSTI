@@ -12,7 +12,7 @@ with open("user.json", "r") as read_file2:
 app = FastAPI()
 
 @app.post('/user/register')
-async def write_user(username : str, password : str):
+async def register_user(username : str, password : str):
     hashing = get_password_hash(password)
     newdata = {'username': username, 'password' : hashing}
     data2.append(newdata)
@@ -22,7 +22,7 @@ async def write_user(username : str, password : str):
     return data2
 
 @app.post('/user/login')
-async def write_user(username : str, password : str):
+async def login_user(username : str, password : str):
     for data_user in data2:
         if data_user['username'] == username:
             if verify_password(password, data_user['password']):
